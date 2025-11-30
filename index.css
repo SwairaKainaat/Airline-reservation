@@ -1,0 +1,134 @@
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* HEADER */
+    header {
+        background-color: #0d6efd;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    header .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    header .search-social {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    header input[type="text"] {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    header .social-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    /* NAVIGATION BAR */
+    nav {
+        background-color: #007bff;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        background-color: #0056b3;
+    }
+
+/* SLIDER */
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: 400px; /* increased height */
+    margin: 20px 0;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%; /* ensure it fills slider height */
+    animation: slide 12s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%; /* make image fill slider height */
+    object-fit: cover; /* fill container without distortion */
+}
+
+
+    @keyframes slide {
+        0% { transform: translateX(0%); }
+        33% { transform: translateX(-100%); }
+        66% { transform: translateX(-200%); }
+        100% { transform: translateX(0%); }
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: #0d6efd;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px){
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+
+        .search-social {
+            margin-top: 10px;
+        }
+    }
